@@ -1,0 +1,29 @@
+.portfolio-logo {
+  background: url(../images/logo.png) no-repeat;
+  background-size: cover;
+  height: 9rem;
+  width: 53rem;
+}
+
+.is-compact .portfolio-logo {
+  height: 3rem;
+  width: 18rem;
+  margin-top: 0rem;
+}
+
+.single-column {
+  justify-content: center;
+}
+
+.demo-card-wide.mdl-card {
+  width: 90vw;
+  margin: 4rem;
+}
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 60vh;
+  background: url('../images/bookkeeping-card.jpg') center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
