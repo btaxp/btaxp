@@ -1,8 +1,6 @@
 .portfolio-logo {
   background: url(../images/logo.png) no-repeat;
-  background-size: cover;
-  height: 9rem;
-  width: 53rem;
+  background-size: contain;
 }
 
 .is-compact .portfolio-logo {
@@ -13,11 +11,12 @@
 
 .single-column {
   justify-content: center;
+  margin-top: 3rem;
 }
 
 .demo-card-wide.mdl-card {
-  width: 90vw;
-  margin: 4rem;
+  width: 75vw;
+  margin: auto;
 }
 .demo-card-wide > .mdl-card__title {
   color: #fff;
@@ -26,4 +25,30 @@
 }
 .demo-card-wide > .mdl-card__menu {
   color: #fff;
+}
+
+.staff-card {
+  width: 70vw;
+  min-height: 50vh;
+  margin: auto;
+}
+
+.staff-card .mdl-card__title {
+  background-color: #d1d2d4;
+  color: white;
+}
+
+.diana-card {
+  background: url('../images/diana-card.jpg') center no-repeat;
+  background-size: contain;
+}
+
+.img-responsive {
+    max-width: 100%;
+    height: 12rem;
+    width: 70vw;
+}
+
+.is-compact > .mdl-layout__drawer .mdl-layout--small-screen-only {
+  display: block;
 }

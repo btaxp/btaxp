@@ -28,20 +28,6 @@
   min-height: auto;
 }
 
-.portfolio-logo {
-  background: url(../images/logo.png) 50% no-repeat;
-  background-size: cover;
-  height: 150px;
-  width: 150px;
-  margin: auto auto 10px;
-}
-
-.is-compact .portfolio-logo {
-  height: 50px;
-  width: 50px;
-  margin-top: 7px;
-}
-
 .portfolio-navigation-row {
   background-color: #d1d2d4;
   text-transform: uppercase;
