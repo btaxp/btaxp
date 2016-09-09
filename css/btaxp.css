@@ -33,10 +33,10 @@
   margin: auto;
 }
 
-.staff-card .mdl-card__title {
-  background-color: #d1d2d4;
-  color: white;
+.staff-card:not(:first-of-type) {
+  margin-top: 2rem;
 }
+
 
 .diana-card {
   background: url('../images/diana-card.jpg') center no-repeat;
@@ -51,4 +51,20 @@
 
 .is-compact > .mdl-layout__drawer .mdl-layout--small-screen-only {
   display: block;
+}
+
+.full-height-sep {
+  min-height: 100vh;
+  padding: 2rem;
+  align-items: flex-start;
+}
+
+.blue-bg {
+  background-color: #01178a;
+  color: white;
+}
+
+.grey-bg {
+  background-color: #d1d2d4;
+  color: white;
 }
