@@ -68,3 +68,43 @@
   background-color: #d1d2d4;
   color: white;
 }
+
+.services-card {
+  background-color: #01178a;
+}
+
+.services-card .mdl-card__supporting-text {
+  color: white;
+}
+
+.services-card .mdl-card__title-text {
+  color: white;
+  width: 75%;
+}
+
+.services-title-image {
+  background-size: 5rem;
+  background-repeat: no-repeat;
+  background-position: right;
+  color: #d1d2d4;
+}
+
+.bookkeeping-title {
+  background-image: url('../images/book.png');
+}
+
+.irs-title {
+  background-image: url('../images/irs.png');
+}
+
+.paycheck-title {
+  background-image: url('../images/list.png');
+}
+
+.paytax-title {
+  background-image: url('../images/alt-list.png');
+}
+
+.salestax-title {
+  background-image: url('../images/money.png');
+}
