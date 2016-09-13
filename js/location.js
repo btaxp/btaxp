@@ -1,4 +1,4 @@
-var btaxpLocation = {lat: 35.076654, lng: -81.761685};
+var btaxpLocation = {lat: 35.080135, lng: -81.657608};
 var map;
 function initMap() {
   var directionsDisplay = new google.maps.DirectionsRenderer;
