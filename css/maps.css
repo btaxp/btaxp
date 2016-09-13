@@ -4,6 +4,22 @@
  }
 
 
+#floating-address {
+  position: absolute;
+  bottom: .5rem;
+  left: 25rem;
+  z-index: 5;
+  background-color: #fff;
+  border: 1px solid #999;
+  text-align: center;
+  font-family: 'Roboto','sans-serif';
+}
+#floating-address ul {
+  list-style-type: none;
+  padding: 1rem;
+  margin: 0;
+}
+
 #floating-panel {
   position: absolute;
   top: 10px;
