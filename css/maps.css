@@ -59,6 +59,10 @@
 #map {
   margin-right: 400px;
 }
+
+#map-link {
+  display: none;
+}
 #floating-panel {
   background: #fff;
   padding: 5px;
@@ -78,3 +82,17 @@
   }
 }
 
+@media screen and (max-width: 400px) {
+  #map-link {
+    display: block;
+  }
+  #floating-address {
+    position: initial;
+  }
+  #floating-panel {
+    display: none;
+  {
+  #right-panel {
+    display: none;
+  }
+}

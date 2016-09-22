@@ -7,10 +7,16 @@ a {
   background-size: contain;
 }
 
+.compact {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .compact .portfolio-logo {
   height: 3rem;
   width: 18rem;
   margin-top: 0rem;
+  align-items: flex-start;
 }
 
 .compact .portfolio-navigation-row {
@@ -41,20 +47,33 @@ a {
   color: #fff;
 }
 
-.staff-card {
+.staff-card-box {
   width: 70vw;
   min-height: 50vh;
   margin: auto;
 }
 
-.staff-card:not(:first-of-type) {
+.staff-card-box:not(:first-of-type) {
   margin-top: 2rem;
+  background-size: cover;
+  height: 25rem;
 }
 
+.staff-card {
+  background-position: center;
+  background-repeat: no-repeat
+}
+
+.tina-card {
+  background-image: url('http://lorempixel.com/600/600/people');
+}
 
 .diana-card {
-  background: url('../images/diana-card.jpg') center no-repeat;
-  background-size: contain;
+  background-image: url('http://lorempixel.com/600/600/people');
+}
+
+.angela-card {
+  background-image: url('http://lorempixel.com/600/600/people');
 }
 
 .img-responsive {
@@ -130,4 +149,16 @@ a {
 .portfolio-header .sub-page-logo-row {
   justify-content: space-between;
   padding: 1rem;
+}
+
+@media screen and (max-width: 400px) {
+
+  .mdl-menu .mdl-navigation {
+    flex-direction: column;
+  }
+
+  .portfolio-header .sub-page-logo-row {
+    justify-content: center;
+    width: 100%;
+  }
 }
