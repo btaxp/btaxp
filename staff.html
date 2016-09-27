@@ -73,7 +73,7 @@ limitations under the License
           Aenan convallis.
         </div>
         <div class="mdl-card__actions mdl-card--border">
-          <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+          <a id="tina-more-button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
             More Information
           </a>
         </div>
@@ -87,7 +87,7 @@ limitations under the License
           Aenan convallis.
         </div>
         <div class="mdl-card__actions mdl-card--border">
-          <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+          <a id="diana-more-button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
             More Information
           </a>
         </div>
@@ -101,11 +101,44 @@ limitations under the License
           Aenan convallis.
         </div>
         <div class="mdl-card__actions mdl-card--border">
-          <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+          <a id="angela-more-button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
             More Information
           </a>
         </div>
       </div>
+      <dialog id="tina-dialog" class="mdl-dialog staff-dialog">
+        <h4 class="mdl-dialog__title">Tina M. McSwain, EA</h4>
+        <div class="mdl-dialog__content">
+          <p>
+            Hey! I am Tina.
+          </p>
+        </div>
+        <div class="mdl-dialog__actions">
+          <button type="button" class="mdl-button close">Close</button>
+        </div>
+      </dialog>
+      <dialog id="diana-dialog" class="mdl-dialog staff-dialog">
+        <h4 class="mdl-dialog__title">Diana M. Reid, EA</h4>
+        <div class="mdl-dialog__content">
+          <p>
+            Hey! I am Diana.
+          </p>
+        </div>
+        <div class="mdl-dialog__actions">
+          <button type="button" class="mdl-button close">Close</button>
+        </div>
+      </dialog>
+      <dialog id="angela-dialog" class="mdl-dialog staff-dialog">
+        <h4 class="mdl-dialog__title">Angela S. Beattie</h4>
+        <div class="mdl-dialog__content">
+          <p>
+            Hey! I am Angela.
+          </p>
+        </div>
+        <div class="mdl-dialog__actions">
+          <button type="button" class="mdl-button close">Close</button>
+        </div>
+      </dialog>
       </main>
 
       <footer class="mdl-mini-footer">
@@ -116,6 +149,24 @@ limitations under the License
       </footer>
     </div>
     <script src="https://code.getmdl.io/1.2.0/material.min.js"></script>
+
+  <script>
+    var staffName = ['tina', 'diana', 'angela'];
+
+    staffName.forEach(function(staff, index) {
+      var dialog = document.querySelector('dialog#'+ staff +'-dialog');
+      var showDialogButton = document.querySelector('#'+ staff +'-more-button');
+      if (! dialog.showModal) {
+        dialogPolyfill.registerDialog(dialog);
+      }
+      showDialogButton.addEventListener('click', function() {
+        dialog.showModal();
+      });
+      dialog.querySelector('.close').addEventListener('click', function() {
+        dialog.close();
+      });
+    });
+  </script>
   </body>
 
 </html>

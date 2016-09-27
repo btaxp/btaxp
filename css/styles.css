@@ -140,3 +140,21 @@ img.article-image {
 footer.mdl-mini-footer {
   background-color: #01178a;
 }
+
+@media screen and (max-width: 400px) {
+
+  .demo-card-wide.mdl-card.mdl-shadow--2dp > .mdl-card__title {
+    background-color: #01178a;
+    background-image: none;
+  }
+
+  .portfolio-header:not(.is-compact) .mdl-layout__title {
+    padding-left: 1rem;
+  }
+  .portfolio-logo-row {
+    min-height: 4rem;
+  }
+  .portfolio-logo-row .img-responsive {
+    height: 3rem;
+  }
+}

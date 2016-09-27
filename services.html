@@ -81,7 +81,7 @@ limitations under the License
               We keep books
             </div>
             <div class="mdl-card__actions mdl-card--border">
-              <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+              <a id="bk-services-more-button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
                 More Information
               </a>
             </div>
@@ -99,7 +99,7 @@ limitations under the License
               We keep books
             </div>
             <div class="mdl-card__actions mdl-card--border">
-              <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+              <a id="pay-check-more-button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
                 More Information
               </a>
             </div>
@@ -117,7 +117,7 @@ limitations under the License
               We keep books
             </div>
             <div class="mdl-card__actions mdl-card--border">
-              <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+              <a id="pay-tax-more-button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
                 More Information
               </a>
             </div>
@@ -135,7 +135,7 @@ limitations under the License
               We keep books
             </div>
             <div class="mdl-card__actions mdl-card--border">
-              <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+              <a id="sales-tax-more-button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
                 More Information
               </a>
             </div>
@@ -153,7 +153,7 @@ limitations under the License
               We keep books
             </div>
             <div class="mdl-card__actions mdl-card--border">
-              <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+              <a id="income-tax-more-button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
                 More Information
               </a>
             </div>
@@ -169,11 +169,64 @@ limitations under the License
         Aenan convallis.
       </div>
 
+      <dialog id="bk-services-dialog" class="mdl-dialog services-dialog">
+        <h4 class="mdl-dialog__title">Bookkeeping Servinces</h4>
+        <div class="mdl-dialog__content">
+          <p>
+            Got Some bookkeeping services defined!
+          </p>
+        </div>
+        <div class="mdl-dialog__actions">
+          <button type="button" class="mdl-button close">Close</button>
+        </div>
+      </dialog>
+      <dialog id="pay-check-dialog" class="mdl-dialog services-dialog">
+        <h4 class="mdl-dialog__title">Payroll Check-Writing</h4>
+        <div class="mdl-dialog__content">
+          <p>
+            Got Some pay check services defined!
+          </p>
+        </div>
+        <div class="mdl-dialog__actions">
+          <button type="button" class="mdl-button close">Close</button>
+        </div>
+      </dialog>
+      <dialog id="pay-tax-dialog" class="mdl-dialog services-dialog">
+        <h4 class="mdl-dialog__title">Payroll Tax Prep & Filing</h4>
+        <div class="mdl-dialog__content">
+          <p>
+            Got Some pay check services defined!
+          </p>
+        </div>
+        <div class="mdl-dialog__actions">
+          <button type="button" class="mdl-button close">Close</button>
+        </div>
+      </dialog>
+      <dialog id="sales-tax-dialog" class="mdl-dialog services-dialog">
+        <h4 class="mdl-dialog__title">Sales Tax Prep & Filing</h4>
+        <div class="mdl-dialog__content">
+          <p>
+            Got Some pay check services defined!
+          </p>
+        </div>
+        <div class="mdl-dialog__actions">
+          <button type="button" class="mdl-button close">Close</button>
+        </div>
+      </dialog>
+      <dialog id="income-tax-dialog" class="mdl-dialog services-dialog">
+        <h4 class="mdl-dialog__title">Income Tax Preparation & Planning</h4>
+        <div class="mdl-dialog__content">
+          <p>
+            Got Some pay check services defined!
+          </p>
+        </div>
+        <div class="mdl-dialog__actions">
+          <button type="button" class="mdl-button close">Close</button>
+        </div>
+      </dialog>
       </main>
 
       <footer class="mdl-mini-footer">
-      <div class="mdl-mini-footer__left-section">
-      </div>
       <div class="mdl-mini-footer__right-section">
         <ul class="mdl-mini-footer__link-list">
           <li><a href="#">Help</a></li>
@@ -183,6 +236,23 @@ limitations under the License
       </footer>
     </div>
     <script src="https://code.getmdl.io/1.2.0/material.min.js"></script>
+  <script>
+    var servicesName = ['bk-services', 'pay-check', 'pay-tax', 'sales-tax', 'income-tax'];
+
+    servicesName.forEach(function(service, index) {
+      var dialog = document.querySelector('dialog#'+ service +'-dialog');
+      var showDialogButton = document.querySelector('#'+ service +'-more-button');
+      if (! dialog.showModal) {
+        dialogPolyfill.registerDialog(dialog);
+      }
+      showDialogButton.addEventListener('click', function() {
+        dialog.showModal();
+      });
+      dialog.querySelector('.close').addEventListener('click', function() {
+        dialog.close();
+      });
+    });
+  </script>
   </body>
 
 </html>
