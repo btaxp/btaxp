@@ -2,6 +2,10 @@ a {
   color: #d1d2d4;
 }
 
+ul {
+  list-style-type: none;
+}
+
 .portfolio-logo {
   background: url(../images/logo.png) no-repeat;
   background-size: contain;
@@ -38,11 +42,17 @@ a {
   width: 75vw;
   margin: auto;
 }
+
 .demo-card-wide > .mdl-card__title {
   color: #fff;
   height: 60vh;
-  background: url('../images/bookkeeping-card.jpg') center / cover;
+  //background: url('../images/bookkeeping-card.jpg') center / cover;
 }
+
+.is-small-screen .demo-card-wide > .mdl-card__title {
+  height: 30vh;
+}
+
 .demo-card-wide > .mdl-card__menu {
   color: #fff;
 }
@@ -119,6 +129,10 @@ a {
   width: 75%;
 }
 
+.services-card h5 {
+  color: white;
+}
+
 .services-title-image {
   background-size: 5rem;
   background-repeat: no-repeat;
@@ -150,6 +164,12 @@ a {
   justify-content: space-between;
   padding: 1rem;
 }
+
+.center-big-content {
+  text-align: center;
+  font-size: 2rem;
+}
+
 
 @media screen and (max-width: 400px) {
 
